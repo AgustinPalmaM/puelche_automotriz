@@ -20,6 +20,7 @@ El sistema permitirá a los usuarios administradores y vendedores gestionar y ve
   - **Precio**
   - **Kilometraje**
   - **Combustible**
+  - **Tipo vehiculo**
   - **Transmisión**
   - **Traccion**
   - **Publicado?**
@@ -50,7 +51,7 @@ El sistema permitirá a los usuarios administradores y vendedores gestionar y ve
 - Ingresar:
   - **Precio final de venta negociado**
   - **Valor de la transferencia**
-  - **Método de pago** (`Contado`, `crédito`), si es contado se debe detallar formas de pago, si es credito se debe indicar detalles del financiamiento (`plazo`, `cuotas`, `pie`, `forma pago pie`)
+  - **Tipo de venta** (`Contado`, `crédito`)
   - **Formas de pago** (`Efectivo`, `Tarjeta de credito`, `Tarjeta de debito`, `VPP`), puede ser una combinacion de estas formas de pago.
 - Registrar la **fecha de venta**.
 - Cambiar el estado del auto a **"vendido"**.
@@ -60,7 +61,7 @@ El sistema permitirá a los usuarios administradores y vendedores gestionar y ve
 **Usuario:** *Cliente*  
 **Descripción:** La web mostrará información clara y atractiva sobre la automotora y su stock de vehículos, con vista de detalle de cada vehiculo, con filtros necesarios segun las carateristicas de cada vehiculo.
 
-- **Home:**  Página de inicio con resumen de la empresa, promociones y autos destacados.
+- **Home:**  Página de inicio con menu de navegacion, banner con promociones, autos destacados y footer con contactos.
 
 - **Galería de Autos:**  Sección con catálogo de autos en venta, filtros y buscador avanzado.
 
