@@ -53,6 +53,25 @@ El sistema permitirá a los usuarios administradores y vendedores gestionar y ve
   - **Valor de la transferencia**
   - **Tipo de venta** (`Contado`, `crédito`)
   - **Formas de pago** (`Efectivo`, `Tarjeta de credito`, `Tarjeta de debito`, `VPP`), puede ser una combinacion de estas formas de pago.
+  - Si la forma de pago es `VPP`, registrar las mismas características que un auto:
+  - **Marca**
+  - **Estilo**
+  - **Modelo**
+  - **Año**
+  - **Color**
+  - **Costo**
+  - **Precio**
+  - **Kilometraje**
+  - **Combustible**
+  - **Transmisión**
+  - **Tracción**
+  - **Estado** (`Recibido`, `En evaluación`, `Aceptado`, `Rechazado`).
+- Si la forma de pago es `Financiamiento`, ingresar los siguientes detalles:
+  - **Monto a financiar**
+  - **Plazo** (en meses)
+  - **Valor cuota**
+  - **Monto pie**
+  - **Margen crédito**
 - Registrar la **fecha de venta**.
 - Cambiar el estado del auto a **"vendido"**.
 
