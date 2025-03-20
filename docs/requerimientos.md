@@ -52,7 +52,7 @@ El sistema permitirá a los usuarios administradores y vendedores gestionar y ve
   - **Precio final de venta negociado**
   - **Valor de la transferencia**
   - **Tipo de venta** (`Contado`, `crédito`)
-  - **Formas de pago** (`Efectivo`, `Tarjeta de credito`, `Tarjeta de debito`, `VPP`), puede ser una combinacion de estas formas de pago.
+  - **Formas de pago** (`Efectivo`, `Tarjeta de credito`, `Tarjeta de debito`, `VPP`, `Financiamiento`), puede ser una combinacion de estas formas de pago.
   - Si la forma de pago es `VPP`, registrar las mismas características que un auto:
   - **Marca**
   - **Estilo**
@@ -75,7 +75,36 @@ El sistema permitirá a los usuarios administradores y vendedores gestionar y ve
 - Registrar la **fecha de venta**.
 - Cambiar el estado del auto a **"vendido"**.
 
-### 4️⃣ Página Web para Clientes
+### 4️⃣ Gestión de Clientes
+**Descripción:** Se registra la información de los clientes que realizan cotizaciones y compras.
+
+**Cliente:**
+- **Primer Nombre**
+- **Segundo Nombre**
+- **Primer Apellido**
+- **Segundo Apellido**
+- **RUT**
+- **Dirección**
+- **Teléfono**
+- **Email**
+- **Ciudad**
+- **Comuna**
+- **Región**
+- **Género**
+- **Fecha de Nacimiento**
+- **Estado Civil**
+- **Nacionalidad**
+
+### 5️⃣ Gestión de Funcionarios
+**Descripción:** Se registran los administradores y vendedores del sistema.
+
+**Funcionario:**
+- **Nombre**
+- **Rol** (`Administrador`, `Vendedor`)
+- **RUT**
+- **Sucursal**
+
+### 6️⃣ Página Web para Clientes
 
 **Usuario:** *Cliente*  
 **Descripción:** La web mostrará información clara y atractiva sobre la automotora y su stock de vehículos, con vista de detalle de cada vehiculo, con filtros necesarios segun las carateristicas de cada vehiculo.

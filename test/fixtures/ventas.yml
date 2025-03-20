@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  funcionario: one
+  cliente: one
+  cotizacion: one
+  auto: one
+  precio_lista: 1
+  descuento_integer: MyString
+  valor_transferencia: 1
+  estado: 1
+
+two:
+  funcionario: two
+  cliente: two
+  cotizacion: two
+  auto: two
+  precio_lista: 1
+  descuento_integer: MyString
+  valor_transferencia: 1
+  estado: 1

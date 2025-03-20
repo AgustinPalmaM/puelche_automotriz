@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  forma_pago: one
+  pie: 1
+  saldo_precio: 1
+  plazo: 1
+  margen_credito: 1
+  valor_cuota: 1
+
+two:
+  forma_pago: two
+  pie: 1
+  saldo_precio: 1
+  plazo: 1
+  margen_credito: 1
+  valor_cuota: 1

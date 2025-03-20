@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  forma_pago: one
+  valor_vpp: 1
+  patente: MyString
+  monto_reparaciones: 1
+  observaciones: MyString
+
+two:
+  forma_pago: two
+  valor_vpp: 1
+  patente: MyString
+  monto_reparaciones: 1
+  observaciones: MyString
