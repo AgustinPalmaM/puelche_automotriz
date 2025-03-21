@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #000000;
   padding: 20px;
   color: white;
 }
@@ -50,15 +50,15 @@ nav ul li a {
 /* Slider */
 .slider {
   position: relative;
-  width: 100%;
-  height: 400px;
-  background: #000;
+  width: 100%; /* El slider ocupa todo el ancho */
+  height: 600px; /* Altura fija */
+  overflow: hidden; /* Evitar que los elementos se desborden */
 }
 
-.slider .slide {
-  width: 100%;
-  height: 100%;
-  background: center/cover no-repeat;
+.slider img {
+  width: 100%; /* La imagen ocupa el 100% del ancho */
+  height: 100%; /* La imagen ocupa el 100% de la altura */
+  object-fit: cover; /* Ajusta la imagen manteniendo la proporción sin distorsionarla */
 }
 
 .slider .caption {
@@ -124,7 +124,7 @@ nav ul li a {
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #000000;
   color: white;
   padding: 20px 0;
 }

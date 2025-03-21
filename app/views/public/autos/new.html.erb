@@ -1,0 +1,64 @@
+<div>
+  <%= form_with(model: @auto, url: public_autos_path, local: true) do |form| %>
+    <!-- Campo para la marca -->
+    <div class="field">
+      <%= form.label :marca %>
+      <%= form.text_field :marca %>
+    </div>
+    <div class="field">
+      <%= form.label :estilo %>
+      <%= form.text_field :estilo %>
+    </div>
+    <div class="field">
+      <%= form.label :modelo %>
+      <%= form.text_field :modelo %>
+    </div>
+    <div class="field">
+      <%= form.label :anio %>
+      <%= form.text_field :anio %>
+    </div>
+    <div class="field">
+      <%= form.label :color %>
+      <%= form.text_field :color %>
+    </div>
+    <div class="field">
+      <%= form.label :costo %>
+      <%= form.number_field :costo %>
+    </div>
+    <div class="field">
+      <%= form.label :precio %>
+      <%= form.number_field :precio %>
+    </div>
+    <div class="field">
+      <%= form.label :transmision %>
+      <%= form.text_field :transmision %>
+    </div>
+     <div class="field">
+      <%= form.label :traccion %>
+      <%= form.text_field :traccion %>
+    </div>
+    <div class="field">
+      <%= form.label :combustible %>
+      <%= form.text_field :combustible %>
+    </div>
+    <div class="field">
+      <%= form.label :categoria %>
+      <%= form.text_field :categoria %>
+    </div>
+    <div class="field">
+      <%= form.label :estado %>
+      <%= form.number_field :estado %>
+    </div>
+    <div class="field">
+      <%= form.label :kilometraje %>
+      <%= form.number_field :kilometraje %>
+    </div>
+    <div class="field">
+      <%= form.label :photos, "Fotos" %>
+      <%= form.file_field :photos, multiple: true %> <!-- Agrega la opción "multiple" para aceptar varias imágenes -->
+    </div>
+    <div>
+      <%= form.submit 'Crear auto' %>
+    </div>
+  <% end %>
+</div>

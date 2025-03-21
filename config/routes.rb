@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :public do
-    resources :autos, only: %i[index show]
+    resources :autos, only: %i[index show new create]
     get "pages/home"
     get "pages/financiamiento"
     get "pages/consignacion"
