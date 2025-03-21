@@ -22,7 +22,32 @@
     <%= javascript_importmap_tags %>
   </head>
 
+  <!-- Header -->
+  <header>
+  <!-- Barra de navegación (puedes modificar según lo necesites) -->
+    <nav>
+      <ul>
+        <li><%= link_to  "Inicio", public_pages_home_path %></li>
+        <li><%= link_to  "Sobre Nosotros", public_pages_nosotros_path %></li>
+        <li><%= link_to  "Nuestro Stock", public_autos_path %></li>
+        <li><%= link_to  "Consigna tu auto", public_pages_consignacion_path %></li>
+        <li><%= link_to  "Compramos tu auto", public_pages_compra_path %></li>
+        <li><%= link_to  "Financiamos tu auto", public_pages_financiamiento_path %></li>
+        <li><%= link_to  "Contacto", public_pages_contacto_path %></li>
+      </ul>
+    </nav>
+  </header>
   <body>
     <%= yield %>
   </body>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <ul>
+        <li><a href="/terms">Términos</a></li>
+        <li><a href="/privacy">Privacidad</a></li>
+        <li><a href="/contact">Contáctanos</a></li>
+      </ul>
+    </div>
+  </footer>
 </html>
