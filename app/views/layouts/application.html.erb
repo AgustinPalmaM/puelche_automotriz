@@ -25,7 +25,7 @@
   <!-- Header -->
   <header>
     <nav x-data="{ open: false }"  class="flex h-auto w-auto bg-white shadow-lg rounded-lg justify-between
-        md:h-16">
+        md:h-16 relative z-10">
         <div class="flex w-full justify-between ">
             <div :class="open ? 'hidden':'flex'" 
             class="flex px-6 w-1/2 items-center font-semibold
@@ -73,11 +73,12 @@
             </button>
         </div>
     </nav>
+    
   <header/>
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+
       <%= yield %>
-    </main>
+
   </body>
   <!-- Footer -->
   <div class="flex items-end w-full min-h-screen bg-white">
