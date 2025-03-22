@@ -72,6 +72,7 @@ GEM
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
       uri (>= 0.13.1)
+    add (0.3.2)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.2)
@@ -316,6 +317,16 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.5)
+    tailwindcss-rails (4.2.1)
+      railties (>= 7.0.0)
+      tailwindcss-ruby (~> 4.0)
+    tailwindcss-ruby (4.0.14)
+    tailwindcss-ruby (4.0.14-aarch64-linux-gnu)
+    tailwindcss-ruby (4.0.14-aarch64-linux-musl)
+    tailwindcss-ruby (4.0.14-arm64-darwin)
+    tailwindcss-ruby (4.0.14-x86_64-darwin)
+    tailwindcss-ruby (4.0.14-x86_64-linux-gnu)
+    tailwindcss-ruby (4.0.14-x86_64-linux-musl)
     thor (1.3.2)
     thruster (0.1.12)
     thruster (0.1.12-aarch64-linux)
@@ -360,6 +371,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  add (~> 0.3.2)
   bootsnap
   brakeman
   capybara
@@ -377,6 +389,8 @@ DEPENDENCIES
   solid_cache
   solid_queue
   stimulus-rails
+  tailwindcss-rails (~> 4.2)
+  tailwindcss-ruby (~> 4.0)
   thruster
   turbo-rails
   tzinfo-data

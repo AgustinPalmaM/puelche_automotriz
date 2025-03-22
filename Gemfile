@@ -61,3 +61,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "tailwindcss-ruby", "~> 4.0"
+
+gem "add", "~> 0.3.2"
+gem "tailwindcss-rails", "~> 4.2"
