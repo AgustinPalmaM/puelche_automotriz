@@ -1,0 +1,220 @@
+<div class="bg-white">
+  <div class="container mx-auto px-4 py-8">
+    <div class="flex flex-wrap -mx-4">
+      <!-- Product Images -->
+      <div class="w-full md:w-1/2 px-4 mb-8">
+        <% if @auto.photos.first %>
+
+          <div id="gallery" class="relative w-full mb-2" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-200">
+              <% @auto.photos.each do |photo| %>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <%= image_tag(photo, class: "absolute block w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg ") %>
+                </div>
+              <% end %>
+
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev>
+              <span
+                class="
+                  inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4
+                  group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none
+                "
+              >
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next>
+              <span
+                class="
+                  inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4
+                  group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none
+                "
+              >
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+
+          <%# <div class="flex gap-2 justify-center overflow-x-auto"> %>
+          <%# <% @auto.photos.each do |photo| %>
+
+          <%# <%= image_tag(photo, class: "size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300", alt: "Thumbnail 1") %>
+
+          <%# <% end %>
+          <%# </div> %>
+        <% else %>
+          <%= image_tag("en_preparacion.webp", class: "w-full h-auto rounded-lg shadow-md mb-1", alt: "Auto", id: "mainImage") %>
+        <% end %>
+      </div>
+      <!-- Product Details -->
+      <div class="w-full md:w-1/2 px-4">
+        <h2 class="text-4xl font-bold mb-2"><%= @auto.descripcion %></h2>
+        <div class="my-4 bg-black w-full rounded-lg justify-middle flex justify-center">
+          <span class="text-5xl font-extrabold mr-2 text-white p-1"><%= @auto.precio_formateado %></span>
+        </div>
+        <%# tables %>
+        <div class="flex">
+
+          <table class="w-1/2 text-left table-auto min-w-max">
+            <tbody>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800">Año:</p>
+                </td>
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800"><%= @auto.anio %></p>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800">Kilometraje:</p>
+                </td>
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800"><%= @auto.kilometraje_formateado %>
+                    Kms</p>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800">Transmision:</p>
+                </td>
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800"><%= @auto.transmision %></p>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800">Traccion:</p>
+                </td>
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800"><%= @auto.traccion %></p>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800">Combustible:</p>
+                </td>
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800"><%= @auto.combustible %></p>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-slate-50">
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800">Categoria:</p>
+                </td>
+                <td class="p-2 border-b border-slate-200">
+                  <p class="block font-semibold text-sm text-slate-800"><%= @auto.categoria %></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div
+            id="alert-additional-content-1"
+            class="p-4 w-1/2 mx-2 text-blue-800 border border-blue-300 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-800"
+            role="alert"
+          >
+            <div class="flex items-center">
+              <svg class="shrink-0 w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
+                />
+              </svg>
+              <span class="sr-only">Info</span>
+              <h3 class="text-lg font-bold">Financiamiento disponible</h3>
+            </div>
+            <div class="mt-2 mb-3 text-m">
+              Llevate este auto con un pie desde:
+            </div>
+            <span class="text-4xl font-bold mr-2"><%= @auto.precio_pie_20 %></span>
+            <div class="mt-2 mb-4 text-m">
+              Plazo hasta 48 meses
+            </div>
+            <button
+              type="button"
+              data-twe-ripple-init
+              data-twe-ripple-color="light"
+              class="
+                mb-2 inline-block rounded bg-[#128c7e] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg
+                focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg w-1/2 flex cursor-pointer
+              "
+            >
+
+              <span class="text-lg">Cotiza Aqui</span>
+            </button>
+
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold my-4">Caracteristicas:</h3>
+          <ul class="list-disc list-inside text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-1">
+            <% @auto.caracteristicas.each do |caracteristica| %>
+              <li class="flex items-center space-x-3 rtl:space-x-reverse">
+
+                <svg
+                  class="shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400"
+                  height="256px"
+                  width="256px"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 310.28 310.28"
+                  xml:space="preserve"
+                  fill="#3cb44b"
+                  stroke="#3cb44b"
+                  stroke-width="0.0031027700000000004"
+                ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                    <g>
+                      <path
+                        style="fill:#3cb44b;"
+                        d="M155.139,0C69.598,0,0,69.598,0,155.139c0,85.547,69.598,155.139,155.139,155.139 c85.547,0,155.139-69.592,155.139-155.139C310.277,69.598,240.686,0,155.139,0z M144.177,196.567L90.571,142.96l8.437-8.437 l45.169,45.169l81.34-81.34l8.437,8.437L144.177,196.567z"
+                      ></path>
+                    </g>
+                  </g></svg>
+                <span><%= caracteristica %></span>
+              </li>
+            <% end %>
+          </ul>
+
+        </div>
+        <div class="mt-8">
+          <button
+            type="button"
+            class="
+              text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-bold rounded-lg text-3xl px-5 py-2.5 text-center
+              dark:focus:ring-[#F7BE38]/50 me-2 mb-2 w-full text-center cursor-pointer
+            "
+          >
+            Contactanos
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12">
+      <h1 class="mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">¿ Como llegar a nuestro local ?</h1>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.562723554678!2d-73.11798991091068!3d-36.77528880071403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669cb0059e61297%3A0xedb9b5f39bb99671!2sPuelche%20Automotriz!5e1!3m2!1sen!2scl!4v1743621514880!5m2!1sen!2scl"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="w-full opacity-70 hover:opacity-84 rounded-lg my-4"
+      ></iframe>
+    </div>
+  </div>

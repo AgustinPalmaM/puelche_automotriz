@@ -1,5 +1,5 @@
 <div>
-  <%= form_with(model: @auto, url: public_autos_path, local: true) do |form| %>
+  <%= form_with(model: @auto, url: public_auto_path, method: :put, local: true) do |form| %>
     <!-- Campo para la marca -->
     <div class="field">
       <%= form.label :marca %>
