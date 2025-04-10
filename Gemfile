@@ -68,3 +68,5 @@ gem 'tailwindcss-ruby', '~> 4.0'
 
 gem 'add', '~> 0.3.2'
 gem 'tailwindcss-rails', '~> 4.2'
+
+gem "fast_excel", "~> 0.5.0"

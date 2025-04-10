@@ -1,5 +1,6 @@
 class Public::PagesController < ApplicationController
   def home
+    @destacados = Auto.all.limit(4)
   end
 
   def financiamiento
